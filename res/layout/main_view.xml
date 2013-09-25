@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="5dp"
+     >
+     <LinearLayout 
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:orientation="vertical">
+         <!-- 注意TabWidget与FrameLayout的id一定是android:id的形式，且名字也不要改变均是 tabs和tabcontent，否则报错 -->
+         <TabWidget 
+             android:id="@android:id/tabs"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             ></TabWidget>
+         <android.support.v4.view.ViewPager
+             android:id="@+id/viewpager"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             />
+         <!-- 这里讲tabhost的tabcontent隐藏，用viewpager填充 -->
+         <!--android:visibility三个属性： visible显示；invisible显示黑背景条；gone不显示 -->
+         <FrameLayout 
+             android:id="@android:id/tabcontent"
+             android:visibility="gone"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent">   
+         </FrameLayout>"
+     </LinearLayout>
+</TabHost>
